@@ -1,6 +1,6 @@
 # Peach Koi Image Prompt Studio — Standalone Embed
 
-A self-contained, single-page cinematic image prompt builder styled to the **Peach Koi Creative** identity. The entire distributable—including embedded brand artwork, styles, application logic, and all **181 reusable prompt blocks**—lives in [`index.html`](./index.html).
+A self-contained, single-page cinematic image prompt builder styled to the **Peach Koi Creative** identity. The core application—including embedded brand artwork, styles, application logic, and all **181 reusable prompt blocks**—lives in [`index.html`](./index.html). A small manifest, service worker and icon set make the hosted version installable as a desktop app.
 
 No framework, build step, database, account, or external JavaScript dependency is required.
 
@@ -28,6 +28,7 @@ No framework, build step, database, account, or external JavaScript dependency i
 - Persistent Peach Koi light and dark modes, with first-visit system-theme detection
 - Browser-local privacy: user data stays in `localStorage`
 - Parent-page events for embedded integrations
+- Installable desktop PWA with its own app window and offline access
 
 ## Quick start
 
@@ -38,6 +39,20 @@ python -m http.server 8080
 ```
 
 Then visit `http://localhost:8080`.
+
+## Install as a desktop app
+
+Open the live site in a current version of **Chrome** or **Microsoft Edge**:
+
+1. Visit `https://felixgeekfox.github.io/image-prompt-generator/`.
+2. Select **Install app** in the Peach Koi header.
+3. Confirm the browser installation prompt.
+
+The Prompt Studio then opens from the operating system's application menu in its own standalone window. Drafts, saved prompts, character profiles and theme preferences remain stored locally on that device.
+
+If the install prompt is not ready yet, reload the page once or use the browser menu and choose **Install Peach Koi Image Prompt Studio**. Safari users can use **Add to Dock** where supported.
+
+The service worker caches the application shell for offline use. Opening the site while online refreshes the cached app when a newer deployment is available.
 
 ## Embed in another website
 
