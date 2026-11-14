@@ -14,6 +14,8 @@ No framework, build step, database, account, or external JavaScript dependency i
 - 15 mood presets
 - 26 visual style presets
 - 20 rendering and quality constraints
+- Simple mode that turns a few natural-language sentences into a complete production-ready prompt
+- Advanced mode with direct control over every prompt section
 - Reusable character profiles
 - Preset/custom toggles for scenes, poses, and environments
 - Searchable selectors
@@ -84,8 +86,18 @@ For responsive layouts:
 |---|---|---|
 | `compact=1` | `?compact=1` | Uses slightly tighter corner radii for embeds |
 | `accent=HEX` | `?accent=22d3ee` | Changes the primary cyan accent colour |
+| `mode=simple` | `?mode=simple` | Opens the natural-language Simple builder |
+| `mode=advanced` | `?mode=advanced` | Opens the full preset-driven Advanced builder |
 
 Visitors can switch themes from the header. Their choice is stored locally in the browser and restored on future visits.
+
+## Simple and Advanced modes
+
+**Simple mode** accepts a short natural-language image idea and expands it locally into a structured visual brief covering character/reference fidelity, scene and pose clarity, clothing, environment, composition, lighting, art direction, clean rendering, text handling, comic continuity, tone, and the final emotional impression. Keyword matching selects relevant presets only when they strongly support the supplied concept.
+
+**Advanced mode** exposes the complete preset-driven builder for direct control over every prompt section.
+
+Simple mode is deterministic and private: it does not send descriptions to an AI service or require an API key.
 
 ## Parent-page events
 
@@ -119,8 +131,10 @@ When used directly on a page, the app exposes a small API at `window.PeachKoiPro
 ```js
 PeachKoiPromptStudio.generate();
 const prompt = PeachKoiPromptStudio.assemble();
+const simplePrompt = PeachKoiPromptStudio.assembleSimple();
 const state = PeachKoiPromptStudio.getState();
 PeachKoiPromptStudio.setState({ title: "Lantern Night" });
+PeachKoiPromptStudio.setMode("advanced");
 const characters = PeachKoiPromptStudio.getCharacters();
 ```
 
