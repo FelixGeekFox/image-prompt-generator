@@ -23,6 +23,7 @@ No framework, build step, database, account, or external JavaScript dependency i
 - Save, favourite, load, copy, and delete prompts
 - JSON backup and restore
 - Responsive Peach Koi Creative interface using the official Pearl Cream, Midnight Plum, Koi Peach, Sakura Pink, and Wisteria palette
+- Persistent Peach Koi light and dark modes, with first-visit system-theme detection
 - Browser-local privacy: user data stays in `localStorage`
 - Parent-page events for embedded integrations
 
@@ -83,6 +84,8 @@ For responsive layouts:
 |---|---|---|
 | `compact=1` | `?compact=1` | Uses slightly tighter corner radii for embeds |
 | `accent=HEX` | `?accent=22d3ee` | Changes the primary cyan accent colour |
+
+Visitors can switch themes from the header. Their choice is stored locally in the browser and restored on future visits.
 
 ## Parent-page events
 
