@@ -1,0 +1,44 @@
+{
+  "name": "Peach Koi Image Prompt Studio",
+  "short_name": "PKC Prompts",
+  "description": "Turn short image ideas into polished visual prompts or build them in detail with 181 creative presets.",
+  "id": "./",
+  "start_url": "./?source=pwa&mode=simple",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#fff3ed",
+  "theme_color": "#21102f",
+  "categories": ["design", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Simple prompt",
+      "short_name": "Simple",
+      "description": "Turn a short description into a polished image prompt.",
+      "url": "./?source=pwa&mode=simple",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Advanced builder",
+      "short_name": "Advanced",
+      "description": "Open the complete preset-driven prompt builder.",
+      "url": "./?source=pwa&mode=advanced",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
